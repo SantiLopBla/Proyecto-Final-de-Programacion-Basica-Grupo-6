@@ -1,0 +1,5 @@
+RESERVA | Cabina 1 | 9:00 | ID: S001
+RESERVA | Cabina 1 | 10:00 | ID: S
+RESERVA | Cabina 4 | 12:00 | ID: S002
+RESERVA | Cabina 1 | 12:00 | ID: S002
+LIBERA  | Cabina 1 | 12:00 | ID: S002

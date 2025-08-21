@@ -1,0 +1,219 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proyectofinal;
+
+/**
+ *
+ * @author Ariel
+ */
+public class SistemaGimnasio {
+
+    // Parqueo
+    public char[][] g1, g2, g3;
+    public String[][] g1IDs, g2IDs, g3IDs;
+
+    // Clases grupales
+    public ClaseGrupal[] clases;
+
+    // Cabinas
+    public Cabina cabinas;
+
+    // Auditorio
+    public Auditorio auditorio;
+
+    // Sala de pesas
+    public SalaPesas salaPesas;
+
+    // Recreación - mesas
+    public MesaRecreativa pingPong;
+    public MesaRecreativa billar;
+
+    // Recreación - canchas
+    public CanchaRecreativa[] futbol;
+    public CanchaRecreativa[] baloncesto;
+    public CanchaRecreativa[] tenis;
+
+    public SistemaGimnasio() {
+        // --- Parqueo ---
+        g1 = new char[][]{
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'E', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'D', 'D', 'D', 'L', 'E'}
+        };
+        g2 = new char[][]{
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'E', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'D', 'D', 'D', 'L', 'E'}
+        };
+        g3 = new char[][]{
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'L', 'L', 'L', 'L'},
+            {'L', 'L', 'E', 'L', 'L'},
+            {'D', 'D', 'D', 'L', 'E'}
+        };
+        g1IDs = new String[4][5];
+        g2IDs = new String[5][5];
+        g3IDs = new String[6][5];
+
+        // --- Clases ---
+        clases = new ClaseGrupal[]{
+            new ClaseGrupal("Yoga", "8:00 a.m.", 10),
+            new ClaseGrupal("Crossfit", "10:00 a.m.", 10),
+            new ClaseGrupal("Pilates", "6:00 p.m.", 10),
+            new ClaseGrupal("Zumba", "7:00 p.m.", 10),};
+
+        // --- Cabinas ---
+        cabinas = new Cabina(4);
+
+        // --- Auditorio ---
+        auditorio = new Auditorio();
+
+        // --- Sala de pesas ---
+        salaPesas = new SalaPesas();
+
+        // --- Recreación (mesas) ---
+        pingPong = new MesaRecreativa(2);
+        billar = new MesaRecreativa(2);
+
+        // --- Recreación (canchas) ---
+        futbol = new CanchaRecreativa[]{
+            new CanchaRecreativa("Fútbol 1", 12),
+            new CanchaRecreativa("Fútbol 2", 12)
+        };
+        baloncesto = new CanchaRecreativa[]{
+            new CanchaRecreativa("Baloncesto", 10)
+        };
+        tenis = new CanchaRecreativa[]{
+            new CanchaRecreativa("Tenis 1", 2),
+            new CanchaRecreativa("Tenis 2", 2)
+        };
+    }
+
+    public char[][] getG1() {
+        return g1;
+    }
+
+    public void setG1(char[][] g1) {
+        this.g1 = g1;
+    }
+
+    public char[][] getG2() {
+        return g2;
+    }
+
+    public void setG2(char[][] g2) {
+        this.g2 = g2;
+    }
+
+    public char[][] getG3() {
+        return g3;
+    }
+
+    public void setG3(char[][] g3) {
+        this.g3 = g3;
+    }
+
+    public String[][] getG1IDs() {
+        return g1IDs;
+    }
+
+    public void setG1IDs(String[][] g1IDs) {
+        this.g1IDs = g1IDs;
+    }
+
+    public String[][] getG2IDs() {
+        return g2IDs;
+    }
+
+    public void setG2IDs(String[][] g2IDs) {
+        this.g2IDs = g2IDs;
+    }
+
+    public String[][] getG3IDs() {
+        return g3IDs;
+    }
+
+    public void setG3IDs(String[][] g3IDs) {
+        this.g3IDs = g3IDs;
+    }
+
+    public ClaseGrupal[] getClases() {
+        return clases;
+    }
+
+    public void setClases(ClaseGrupal[] clases) {
+        this.clases = clases;
+    }
+
+    public Cabina getCabinas() {
+        return cabinas;
+    }
+
+    public void setCabinas(Cabina cabinas) {
+        this.cabinas = cabinas;
+    }
+
+    public Auditorio getAuditorio() {
+        return auditorio;
+    }
+
+    public void setAuditorio(Auditorio auditorio) {
+        this.auditorio = auditorio;
+    }
+
+    public SalaPesas getSalaPesas() {
+        return salaPesas;
+    }
+
+    public void setSalaPesas(SalaPesas salaPesas) {
+        this.salaPesas = salaPesas;
+    }
+
+    public MesaRecreativa getPingPong() {
+        return pingPong;
+    }
+
+    public void setPingPong(MesaRecreativa pingPong) {
+        this.pingPong = pingPong;
+    }
+
+    public MesaRecreativa getBillar() {
+        return billar;
+    }
+
+    public void setBillar(MesaRecreativa billar) {
+        this.billar = billar;
+    }
+
+    public CanchaRecreativa[] getFutbol() {
+        return futbol;
+    }
+
+    public void setFutbol(CanchaRecreativa[] futbol) {
+        this.futbol = futbol;
+    }
+
+    public CanchaRecreativa[] getBaloncesto() {
+        return baloncesto;
+    }
+
+    public void setBaloncesto(CanchaRecreativa[] baloncesto) {
+        this.baloncesto = baloncesto;
+    }
+
+    public CanchaRecreativa[] getTenis() {
+        return tenis;
+    }
+
+    public void setTenis(CanchaRecreativa[] tenis) {
+        this.tenis = tenis;
+    }
+
+}
